@@ -10,25 +10,20 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class Form1 : Form
+    public partial class frmBooksDetails : Form
     {
-        public Form1()
+        public frmBooksDetails()
         {
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void btnAll_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmBooksDetails frm = new frmBooksDetails();
-            frm.TopLevel = false;
-            panel3.Controls.Add(frm);
-            frm.BringToFront();
-            frm.Show();
 
         }
     }

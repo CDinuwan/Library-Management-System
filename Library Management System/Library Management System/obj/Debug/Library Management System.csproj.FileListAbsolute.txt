@@ -8,3 +8,4 @@ C:\Users\hecdi\Desktop\Library Management System\Library Management System\Libra
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.CoreCompileInputs.cache
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library Management System.exe
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library Management System.pdb
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmBooksDetails.resources
