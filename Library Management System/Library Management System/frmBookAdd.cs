@@ -17,11 +17,12 @@ namespace Library_Management_System
         SqlCommand cm = new SqlCommand();
         DBConnection dbcon = new DBConnection();
         frmBooksDetails frm = new frmBooksDetails();
-        public frmBookAdd()
+        public frmBookAdd(frmBooksDetails f)
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyCon());
             frm.LoadRecord();
+            frm = f;
         }
 
         private void frmBookAdd_Load(object sender, EventArgs e)
@@ -43,6 +44,9 @@ namespace Library_Management_System
             txtPublicationYear.Clear();
             txtCurrentCopies.Clear();
             txtLanguage.Clear();
+            btnSave.Enabled=true;
+            btnUpdate.Enabled = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,6 +79,115 @@ namespace Library_Management_System
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtISBN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBookTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPublicationYear_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLanguage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCategory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNoOfCopies_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCurrentCopies_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this record?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("update into tblBook set isbn=@isbn,booktitle=@booktitle,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies)values(@isbn,@booktitle,@publicationyear,@language,@category,@noofcopies,@currentcopies", cn);
+                    cm.Parameters.AddWithValue("@isbn", txtISBN.Text);
+                    cm.Parameters.AddWithValue("@booktitle", txtBookTitle.Text);
+                    cm.Parameters.AddWithValue("@publicationyear", txtPublicationYear.Text);
+                    cm.Parameters.AddWithValue("@language", txtLanguage.Text);
+                    cm.Parameters.AddWithValue("@category", txtCategory.Text);
+                    cm.Parameters.AddWithValue("@noofcopies", txtNoOfCopies.Text);
+                    cm.Parameters.AddWithValue("@currentcopies", txtCurrentCopies.Text);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("The record has been updated");
+                    Clear();
+                    frm.LoadRecord();
+                    this.Dispose();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

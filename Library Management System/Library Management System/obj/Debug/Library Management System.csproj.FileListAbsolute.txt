@@ -11,3 +11,7 @@ C:\Users\hecdi\Desktop\Library Management System\Library Management System\Libra
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmBooksDetails.resources
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmUser.resources
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmBookAdd.resources
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\bin\Debug\MetroFramework.Design.dll
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\bin\Debug\MetroFramework.dll
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.CopyComplete

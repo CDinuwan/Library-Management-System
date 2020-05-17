@@ -35,10 +35,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnAll = new System.Windows.Forms.Button();
-            this.btnStudent = new System.Windows.Forms.Button();
             this.btnissue = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,11 +55,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.btnAll);
-            this.panel2.Controls.Add(this.btnStudent);
             this.panel2.Controls.Add(this.btnissue);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -76,7 +76,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 352);
+            this.button2.Location = new System.Drawing.Point(0, 354);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(307, 51);
             this.button2.TabIndex = 8;
@@ -91,11 +91,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 296);
+            this.button1.Location = new System.Drawing.Point(0, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(307, 51);
             this.button1.TabIndex = 7;
-            this.button1.Text = "STAFF";
+            this.button1.Text = "STUDENT";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button5
@@ -129,21 +129,6 @@
             this.btnAll.Text = "BOOKS";
             this.btnAll.UseVisualStyleBackColor = false;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
-            // 
-            // btnStudent
-            // 
-            this.btnStudent.BackColor = System.Drawing.Color.Black;
-            this.btnStudent.FlatAppearance.BorderSize = 0;
-            this.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudent.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudent.ForeColor = System.Drawing.Color.White;
-            this.btnStudent.Location = new System.Drawing.Point(0, 242);
-            this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Size = new System.Drawing.Size(307, 51);
-            this.btnStudent.TabIndex = 3;
-            this.btnStudent.Text = "STUDENTS";
-            this.btnStudent.UseVisualStyleBackColor = false;
             // 
             // btnissue
             // 
@@ -179,6 +164,21 @@
             this.panel3.Size = new System.Drawing.Size(877, 543);
             this.panel3.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 297);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(307, 51);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "STAFF";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,11 +205,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnAll;
-        private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnissue;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
