@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookAdd.Designer.cs">
+      <DependentUpon>frmBookAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBooksDetails.cs">
       <SubType>Form</SubType>
@@ -58,13 +65,25 @@
     <Compile Include="frmBooksDetails.Designer.cs">
       <DependentUpon>frmBooksDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBookAdd.resx">
+      <DependentUpon>frmBookAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBooksDetails.resx">
       <DependentUpon>frmBooksDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
