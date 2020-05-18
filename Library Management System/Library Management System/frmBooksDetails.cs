@@ -106,7 +106,7 @@ namespace Library_Management_System
             cn.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
         }
@@ -116,7 +116,12 @@ namespace Library_Management_System
 
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged_1(object sender, EventArgs e)
         {
 
         }

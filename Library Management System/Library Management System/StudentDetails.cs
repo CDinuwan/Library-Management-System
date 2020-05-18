@@ -48,5 +48,11 @@ namespace Library_Management_System
         {
             this.Dispose();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmStudentAdd frm = new frmStudentAdd();
+            frm.ShowDialog();
+        }
     }
 }
