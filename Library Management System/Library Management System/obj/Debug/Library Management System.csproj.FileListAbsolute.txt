@@ -15,3 +15,4 @@ C:\Users\hecdi\Desktop\Library Management System\Library Management System\Libra
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\bin\Debug\MetroFramework.dll
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.CopyComplete
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.StudentDetails.resources

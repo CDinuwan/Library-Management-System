@@ -44,7 +44,7 @@ namespace Library_Management_System
             txtPublicationYear.Clear();
             txtCurrentCopies.Clear();
             txtLanguage.Clear();
-            btnSave.Enabled=true;
+            btnCancel.Enabled=true;
             btnUpdate.Enabled = false;
 
         }
@@ -168,8 +168,7 @@ namespace Library_Management_System
                 if (MessageBox.Show("Are you sure you want to update this record?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("update into tblBook set isbn=@isbn,booktitle=@booktitle,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies)values(@isbn,@booktitle,@publicationyear,@language,@category,@noofcopies,@currentcopies", cn);
-                    cm.Parameters.AddWithValue("@isbn", txtISBN.Text);
+                    cm = new SqlCommand("update tblBook set booktitle=@booktitle,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies where isbn like'"+txtISBN.Text+"'", cn);
                     cm.Parameters.AddWithValue("@booktitle", txtBookTitle.Text);
                     cm.Parameters.AddWithValue("@publicationyear", txtPublicationYear.Text);
                     cm.Parameters.AddWithValue("@language", txtLanguage.Text);

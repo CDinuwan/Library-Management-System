@@ -31,5 +31,14 @@ namespace Library_Management_System
             frm.Show();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StudentDetails frm = new StudentDetails();
+            frm.TopLevel = false;
+            panel3.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace Library_Management_System
                 i += 1;
                 dataGridView1.Rows.Add(i,dr["isbn"].ToString(),dr["booktitle"].ToString(),dr["publicationyear"].ToString(),dr["language"].ToString(),dr["category"].ToString(),dr["noofcopies"].ToString(),dr["currentcopies"].ToString());
             }
+            dr.Close();
             cn.Close();
         }
 
@@ -49,15 +50,17 @@ namespace Library_Management_System
             if(colName=="Edit")
             {
                 frmBookAdd frm = new frmBookAdd(this);
-                frm.btnSave.Enabled = false;
+                frm.btnCancel.Enabled = false;
                 frm.btnUpdate.Enabled = true;
-                frm.txtISBN.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                frm.txtBookTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                frm.txtPublicationYear.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                frm.txtLanguage.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                frm.txtCategory.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                frm.txtNoOfCopies.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                frm.txtCurrentCopies.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                frm.txtISBN.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                frm.txtBookTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                frm.txtPublicationYear.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                frm.txtLanguage.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                frm.txtCategory.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                frm.txtNoOfCopies.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                frm.txtCurrentCopies.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                frm.ShowDialog();
+
             }
             else if(colName=="Delete")
             {
@@ -101,6 +104,21 @@ namespace Library_Management_System
                 dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
             }
             cn.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
