@@ -79,7 +79,8 @@ namespace Library_Management_System
                 if (MessageBox.Show("Are you sure you want to update this record?", "Question", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("update tblStudent set name=@name,birthday=@birthday,address=@address,phoneno=@phoneno where regno like'" + txtID.Text + "'", cn);
+                    cm = new SqlCommand("update tblStudent set regno=@regno,name=@name,birthday=@birthday,address=@address,phoneno=@phoneno where regno like'" + txtRegno.Text + "'", cn);
+                    cm.Parameters.AddWithValue("@regno", txtRegno.Text);
                     cm.Parameters.AddWithValue("@name", txtName.Text);
                     cm.Parameters.AddWithValue("@birthday", txtBirthDay.Text);
                     cm.Parameters.AddWithValue("@address", txtAddress.Text);
@@ -100,6 +101,56 @@ namespace Library_Management_System
 
 
         private void frmStudentAdd_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBirthDay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRegno_TextChanged(object sender, EventArgs e)
         {
 
         }
