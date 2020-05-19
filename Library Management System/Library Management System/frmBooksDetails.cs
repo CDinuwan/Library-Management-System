@@ -52,6 +52,7 @@ namespace Library_Management_System
                 frmBookAdd frm = new frmBookAdd(this);
                 frm.btnCancel.Enabled = false;
                 frm.btnUpdate.Enabled = true;
+                frm.txtID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frm.txtISBN.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 frm.txtBookTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 frm.txtPublicationYear.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -67,7 +68,7 @@ namespace Library_Management_System
                 if(MessageBox.Show("Are you sure you want to delete this record","Delete",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("delete from tblBook where isbn like'"+dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString()+"'",cn);
+                    cm = new SqlCommand("delete from tblBook where isbn like'"+dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()+"'",cn);
                     cm.ExecuteNonQuery();
                     cn.Close();
                     LoadRecord();
