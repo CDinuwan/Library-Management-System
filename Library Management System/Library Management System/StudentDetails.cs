@@ -27,7 +27,17 @@ namespace Library_Management_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string colName = dataGridView1.Columns[e.ColumnIndex].Name;
+            if(colName=="Edit")
+            {
+                frmStudentAdd frm = new frmStudentAdd(this);
+                frm.txtRegno.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                frm.txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                frm.txtBirthDay.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                frm.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                frm.txtPhoneno.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                frm.ShowDialog();
+            }
         }
         public void LoadRecord()
         {
@@ -51,7 +61,7 @@ namespace Library_Management_System
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            frmStudentAdd frm = new frmStudentAdd();
+            frmStudentAdd frm = new frmStudentAdd(this);
             frm.ShowDialog();
         }
     }

@@ -36,15 +36,15 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtPhoneno = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtLanguage = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPublicationYear = new System.Windows.Forms.TextBox();
+            this.txtBirthDay = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBookTitle = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtISBN = new System.Windows.Forms.TextBox();
+            this.txtRegno = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +94,7 @@
             this.btnUpdate.TabIndex = 34;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -107,6 +108,7 @@
             this.btnSave.TabIndex = 33;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -120,6 +122,7 @@
             this.btnCancel.TabIndex = 32;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label6
             // 
@@ -130,12 +133,12 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Phone Number";
             // 
-            // txtCategory
+            // txtPhoneno
             // 
-            this.txtCategory.Location = new System.Drawing.Point(187, 241);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(335, 24);
-            this.txtCategory.TabIndex = 26;
+            this.txtPhoneno.Location = new System.Drawing.Point(187, 241);
+            this.txtPhoneno.Name = "txtPhoneno";
+            this.txtPhoneno.Size = new System.Drawing.Size(335, 24);
+            this.txtPhoneno.TabIndex = 26;
             // 
             // label5
             // 
@@ -146,12 +149,12 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Address";
             // 
-            // txtLanguage
+            // txtAddress
             // 
-            this.txtLanguage.Location = new System.Drawing.Point(187, 198);
-            this.txtLanguage.Name = "txtLanguage";
-            this.txtLanguage.Size = new System.Drawing.Size(335, 24);
-            this.txtLanguage.TabIndex = 24;
+            this.txtAddress.Location = new System.Drawing.Point(187, 198);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(335, 24);
+            this.txtAddress.TabIndex = 24;
             // 
             // label4
             // 
@@ -162,12 +165,12 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Birth Day";
             // 
-            // txtPublicationYear
+            // txtBirthDay
             // 
-            this.txtPublicationYear.Location = new System.Drawing.Point(187, 157);
-            this.txtPublicationYear.Name = "txtPublicationYear";
-            this.txtPublicationYear.Size = new System.Drawing.Size(335, 24);
-            this.txtPublicationYear.TabIndex = 22;
+            this.txtBirthDay.Location = new System.Drawing.Point(187, 157);
+            this.txtBirthDay.Name = "txtBirthDay";
+            this.txtBirthDay.Size = new System.Drawing.Size(335, 24);
+            this.txtBirthDay.TabIndex = 22;
             // 
             // label3
             // 
@@ -178,12 +181,12 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Name";
             // 
-            // txtBookTitle
+            // txtName
             // 
-            this.txtBookTitle.Location = new System.Drawing.Point(187, 116);
-            this.txtBookTitle.Name = "txtBookTitle";
-            this.txtBookTitle.Size = new System.Drawing.Size(335, 24);
-            this.txtBookTitle.TabIndex = 20;
+            this.txtName.Location = new System.Drawing.Point(187, 116);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(335, 24);
+            this.txtName.TabIndex = 20;
             // 
             // label2
             // 
@@ -194,12 +197,12 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Register Number";
             // 
-            // txtISBN
+            // txtRegno
             // 
-            this.txtISBN.Location = new System.Drawing.Point(187, 74);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(335, 24);
-            this.txtISBN.TabIndex = 18;
+            this.txtRegno.Location = new System.Drawing.Point(187, 74);
+            this.txtRegno.Name = "txtRegno";
+            this.txtRegno.Size = new System.Drawing.Size(335, 24);
+            this.txtRegno.TabIndex = 18;
             // 
             // frmStudentAdd
             // 
@@ -210,21 +213,22 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.txtPhoneno);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtLanguage);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPublicationYear);
+            this.Controls.Add(this.txtBirthDay);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBookTitle);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtISBN);
+            this.Controls.Add(this.txtRegno);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmStudentAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmStudentAdd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -242,14 +246,14 @@
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox txtCategory;
+        public System.Windows.Forms.TextBox txtPhoneno;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox txtLanguage;
+        public System.Windows.Forms.TextBox txtAddress;
         public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtPublicationYear;
+        public System.Windows.Forms.TextBox txtBirthDay;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox txtBookTitle;
+        public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txtISBN;
+        public System.Windows.Forms.TextBox txtRegno;
     }
 }
