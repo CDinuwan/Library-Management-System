@@ -168,7 +168,7 @@ namespace Library_Management_System
                 if (MessageBox.Show("Are you sure you want to update this record?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("update tblBook set isbn=@isbn,booktitle=@booktitle,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies where id like'"+txtID.Text+"'", cn);
+                    cm = new SqlCommand("update tblBook set isbn=@isbn,booktitle=@booktitle,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies where isbn like'"+txtISBN.Text+"'", cn);
                     cm.Parameters.AddWithValue("@isbn", txtISBN.Text);
                     cm.Parameters.AddWithValue("@booktitle", txtBookTitle.Text);
                     cm.Parameters.AddWithValue("@publicationyear", txtPublicationYear.Text);
