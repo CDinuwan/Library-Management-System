@@ -76,7 +76,7 @@ namespace Library_Management_System
         {
             try
             {
-                if (MessageBox.Show("Are you sure you want to update this record?", "Question", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to update this record?", "update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
                     cm = new SqlCommand("update tblStudent set regno=@regno,name=@name,birthday=@birthday,address=@address,phoneno=@phoneno where regno like'" + txtRegno.Text + "'", cn);
@@ -87,10 +87,10 @@ namespace Library_Management_System
                     cm.Parameters.AddWithValue("@phoneno", txtPhoneno.Text);
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Your record has been updated");
-                    this.Dispose();
+                    MessageBox.Show("The record has been updated");
                     Clear();
                     frm.LoadRecord();
+                    this.Dispose();
                 }
             }catch(Exception er)
             {

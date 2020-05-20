@@ -17,3 +17,4 @@ C:\Users\hecdi\Desktop\Library Management System\Library Management System\Libra
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.CopyComplete
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.StudentDetails.resources
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmStudentAdd.resources
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.tblUser.resources

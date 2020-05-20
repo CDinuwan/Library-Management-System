@@ -38,6 +38,15 @@ namespace Library_Management_System
                 frm.txtPhoneno.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 frm.ShowDialog();
             }
+            else if(colName=="Delete")
+            {
+                cn.Open();
+                cm = new SqlCommand("delete from tblStudent where regno like '" + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + "'",cn);
+                cm.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("Your record has been successfully deleted.");
+                LoadRecord();
+            }
         }
         public void LoadRecord()
         {

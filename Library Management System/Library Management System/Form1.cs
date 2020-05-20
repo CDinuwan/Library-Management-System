@@ -45,5 +45,14 @@ namespace Library_Management_System
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tblUser frm = new tblUser();
+            frm.TopLevel = false;
+            panel3.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+        }
     }
 }

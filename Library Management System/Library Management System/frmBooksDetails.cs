@@ -64,10 +64,10 @@ namespace Library_Management_System
             }
             else if(colName=="Delete")
             {
-                if(MessageBox.Show("Are you sure you want to delete this record","Delete",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                if(MessageBox.Show("Are you sure you want to delete this record?","Delete",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("delete from tblBook where isbn like'"+dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString()+"'",cn);
+                    cm = new SqlCommand("delete from tblBook where isbn like'"+dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()+"'",cn);
                     cm.ExecuteNonQuery();
                     cn.Close();
                     LoadRecord();
