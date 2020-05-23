@@ -68,10 +68,26 @@ namespace Library_Management_System
                         LoadRecord();
                     }
                 }
+                else if(colName=="Edit")
+                {
+                    frmStaffAdd frm = new frmStaffAdd(this);
+                    //frm.txtRefNo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    //frm.txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    //frm.txtRole.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    //frm.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    //frm.txtPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    frm.ShowDialog();
+                }
             }catch(Exception er)
             {
                 MessageBox.Show(er.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmStaffAdd frm = new frmStaffAdd(this);
+            frm.ShowDialog();
         }
     }
 }
