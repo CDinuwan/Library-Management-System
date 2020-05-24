@@ -18,7 +18,7 @@ namespace Library_Management_System
         SqlCommand cm = new SqlCommand();
         DBConnection dbcon = new DBConnection();
         SqlDataReader dr;
-        public tblUser()
+        public tblUser()  
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyCon());
@@ -71,11 +71,14 @@ namespace Library_Management_System
                 else if(colName=="Edit")
                 {
                     frmStaffAdd frm = new frmStaffAdd(this);
-                    //frm.txtRefNo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    //frm.txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    //frm.txtRole.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    //frm.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    //frm.txtPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    frm.btnCancel.Enabled = false;
+                    frm.btnUpdate.Enabled = true;
+                    frm.btnSave.Enabled = false;
+                    frm.txtRefNo.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    frm.txtName.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    frm.txtRole.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    frm.txtAddress.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    frm.txtPhone.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
                     frm.ShowDialog();
                 }
             }catch(Exception er)

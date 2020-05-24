@@ -74,6 +74,12 @@
     <Compile Include="frmBooksDetails.Designer.cs">
       <DependentUpon>frmBooksDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDashBoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashBoad.Designer.cs">
+      <DependentUpon>frmDashBoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStaffAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBooksDetails.resx">
       <DependentUpon>frmBooksDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashBoad.resx">
+      <DependentUpon>frmDashBoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStaffAdd.resx">
       <DependentUpon>frmStaffAdd.cs</DependentUpon>
