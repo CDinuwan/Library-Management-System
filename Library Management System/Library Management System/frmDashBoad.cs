@@ -12,6 +12,7 @@ namespace Library_Management_System
 {
     public partial class frmDashBoad : Form
     {
+        DBConnection dbcon = new DBConnection();
         public frmDashBoad()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Library_Management_System
         private void frmDashBoad_Load(object sender, EventArgs e)
         {
 
+            label1.Text = dbcon.GetTotalBooks().ToString();
         }
     }
 }

@@ -12,9 +12,8 @@ namespace Library_Management_System
     {
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
-        SqlDataReader dr;
         private int getTotalBook;
-        private string con;
+        private string con= @"Data Source=DESKTOP-OUGSDHL\SQLEXPRESS;Initial Catalog=LibraryMS;Integrated Security=True";
         public string MyCon()
         {
             con = @"Data Source=DESKTOP-OUGSDHL\SQLEXPRESS;Initial Catalog=LibraryMS;Integrated Security=True";
@@ -22,7 +21,8 @@ namespace Library_Management_System
         }
         public int GetTotalBooks()
         {
-            string sdate = DateTime.Now.ToShortDateString();
+            cn = new SqlConnection();
+            cn.ConnectionString = con;
             cn.Open();
             cm = new SqlCommand("select isnull(sum(noofcopies),0) as noofcopies from tblBook",cn);
             getTotalBook = Int32.Parse(cm.ExecuteScalar().ToString());
