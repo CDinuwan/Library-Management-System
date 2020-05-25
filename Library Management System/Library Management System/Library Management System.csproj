@@ -74,6 +74,12 @@
     <Compile Include="frmBooksDetails.Designer.cs">
       <DependentUpon>frmBooksDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBorrowedBooks.Designer.cs">
+      <DependentUpon>frmBorrowedBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashBoad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBooksDetails.resx">
       <DependentUpon>frmBooksDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBorrowedBooks.resx">
+      <DependentUpon>frmBorrowedBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoad.resx">
       <DependentUpon>frmDashBoad.cs</DependentUpon>

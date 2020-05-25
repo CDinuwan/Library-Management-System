@@ -28,5 +28,10 @@ namespace Library_Management_System
 
             label1.Text = dbcon.GetTotalBooks().ToString();
         }
+
+        private void ll_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

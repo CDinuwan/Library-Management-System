@@ -65,7 +65,6 @@ namespace Library_Management_System
             frmDashBoad frm = new frmDashBoad();
             frm.TopLevel = false;
             panel3.Controls.Add(frm);
-            frm.lblAllBooks.Text = dbcon.GetTotalBooks().ToString();
             frm.BringToFront();
             frm.Show();
         }
@@ -77,6 +76,20 @@ namespace Library_Management_System
             panel3.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmBorrowedBooks frm = new frmBorrowedBooks();
+            frm.TopLevel = false;
+            panel3.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

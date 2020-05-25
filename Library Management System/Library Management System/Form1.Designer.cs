@@ -67,6 +67,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(307, 543);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button2
             // 
@@ -82,6 +83,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "BORROWED BOOKS";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
