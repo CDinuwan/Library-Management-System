@@ -60,6 +60,7 @@ namespace Library_Management_System
                 i += 1;
                 dataGridView1.Rows.Add(dr["regno"].ToString(), dr["name"].ToString(), dr["birthday"].ToString(), dr["address"].ToString(), dr["phoneno"].ToString());
             }
+            dr.Close();
             cn.Close();
         }
 
@@ -72,6 +73,34 @@ namespace Library_Management_System
         {
             frmStudentAdd frm = new frmStudentAdd(this);
             frm.ShowDialog();
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeachText()
+        {
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("Select * from tblStudent where regno like'"+metroTextBox1.Text+"'", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                dataGridView1.Rows.Add(dr["regno"].ToString(), dr["name"].ToString(), dr["birthday"].ToString(), dr["address"].ToString(), dr["phoneno"].ToString());
+            }
+            dr.Close();
+            cn.Close();
+        }
+
+        private void metroTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            SeachText();
+            if(metroTextBox1.Text==String.Empty)
+            {
+                LoadRecord();
+            }
         }
     }
 }

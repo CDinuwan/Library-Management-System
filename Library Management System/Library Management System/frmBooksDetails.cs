@@ -96,7 +96,7 @@ namespace Library_Management_System
             int i = 0;
             dataGridView1.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("select * from tblBook where isbn like '"+metroTextBox1.Text+"'", cn);
+            cm = new SqlCommand("select * from tblBook where isbn like '"+txtSearch.Text+"'", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
@@ -124,6 +124,37 @@ namespace Library_Management_System
         private void bindingSource1_CurrentChanged_1(object sender, EventArgs e)
         {
 
+        }
+        private void SearchText()
+        {
+            try
+            {
+                int i = 0;
+                dataGridView1.Rows.Clear();
+                cn.Open();
+                cm = new SqlCommand("select * from tblBook where isbn like'" + txtSearch.Text + "' order by isbn", cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    i += 1;
+                    dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchText();
+            if(txtSearch.Text==String.Empty)
+            {
+                LoadRecord();
+            }
         }
     }
 }
