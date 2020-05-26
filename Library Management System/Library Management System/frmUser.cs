@@ -25,7 +25,7 @@ namespace Library_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             Form1 frm = new Form1();
-            frm.ShowDialog();
+            frm.Show();
             frmUser f = new frmUser();
             f.Hide();
         }
