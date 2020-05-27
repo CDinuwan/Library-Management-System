@@ -87,10 +87,40 @@ namespace Library_Management_System
             }
         }
 
+        private void SearchText()
+        {
+            int i = 0;
+            dataGridView2.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select * from tblStaff where refno like'" + metroTextBox1.Text + "'", cn);
+            dr = cm.ExecuteReader();
+            while(dr.Read())
+            {
+                i += 1;
+                dataGridView2.Rows.Add(i, dr["refno"].ToString(), dr["name"].ToString(), dr["role"].ToString(), dr["address"].ToString(), dr["phoneno"].ToString());
+            }
+            dr.Close();
+            cn.Close();
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             frmStaffAdd frm = new frmStaffAdd(this);
             frm.ShowDialog();
+        }
+
+        private void metroTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            SearchText();
+            if (metroTextBox1.Text==String.Empty)
+            {
+                LoadRecord();
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
