@@ -90,5 +90,17 @@ namespace Library_Management_System
         {
             
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            frmBorrowedBookAddingList frm = new frmBorrowedBookAddingList();
+            frm.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            frmStudentAdd frm = new frmStudentAdd();
+            frm.ShowDialog();
+        }
     }
 }
