@@ -31,5 +31,10 @@ namespace Library_Management_System
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
