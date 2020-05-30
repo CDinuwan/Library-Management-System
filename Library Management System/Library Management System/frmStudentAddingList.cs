@@ -36,5 +36,13 @@ namespace Library_Management_System
         {
             this.Dispose();
         }
+
+        public void LoadRecords()
+        {
+            dataGridView2.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select ");
+            cn.Close();
+        }
     }
 }

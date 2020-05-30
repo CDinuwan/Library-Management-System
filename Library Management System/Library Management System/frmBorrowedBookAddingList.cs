@@ -35,13 +35,13 @@ namespace Library_Management_System
         }
         private void LoadBooks()
         {
-            dataGridView2.Rows.Clear();
+            dataGridView1.Rows.Clear();
             cn.Open();
             cm = new SqlCommand("select isbn,booktitle,publicationyear,language from tblBook", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
-                dataGridView2.Rows.Add(dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString());
+                dataGridView1.Rows.Add(dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString());
             }
             dr.Close();
             cn.Close();
@@ -50,13 +50,13 @@ namespace Library_Management_System
         {
             try
             {
-                dataGridView2.Rows.Clear();
+                dataGridView1.Rows.Clear();
                 cn.Open();
                 cm = new SqlCommand("select isbn,booktitle,publicationyear,language from tblBook where isbn like'" + txtSearch.Text + "' order by isbn", cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
-                    dataGridView2.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
+                    dataGridView1.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
                 }
                 dr.Close();
                 cn.Close();
@@ -76,6 +76,11 @@ namespace Library_Management_System
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtSearch_Click(object sender, EventArgs e)
         {
 
@@ -91,17 +96,17 @@ namespace Library_Management_System
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void frmBorrowedBookAddingList_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
