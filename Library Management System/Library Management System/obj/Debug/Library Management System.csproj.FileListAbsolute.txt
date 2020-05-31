@@ -23,3 +23,4 @@ C:\Users\hecdi\Desktop\Library Management System\Library Management System\Libra
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmBorrowedBooks.resources
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmBorrowedBookAddingList.resources
 C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.frmStudentAddingList.resources
+C:\Users\hecdi\Desktop\Library Management System\Library Management System\Library Management System\obj\Debug\Library_Management_System.Staff_Details.resources

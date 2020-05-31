@@ -44,11 +44,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Sel = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -188,6 +188,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -201,11 +202,11 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column3,
             this.Column4,
+            this.Column3,
+            this.Column1,
             this.Column2,
-            this.Delete});
+            this.Sel});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,12 +225,12 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
+            // Column4
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 43;
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "ISBN";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 58;
             // 
             // Column3
             // 
@@ -237,12 +238,11 @@
             this.Column3.HeaderText = "BOOK NAME";
             this.Column3.Name = "Column3";
             // 
-            // Column4
+            // Column1
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "ISBN";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 58;
+            this.Column1.HeaderText = "PUBLICATION YEAR";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 142;
             // 
             // Column2
             // 
@@ -251,13 +251,16 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 97;
             // 
-            // Delete
+            // Sel
             // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 5;
+            this.Sel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Sel.HeaderText = "";
+            this.Sel.Image = ((System.Drawing.Image)(resources.GetObject("Sel.Image")));
+            this.Sel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Sel.Name = "Sel";
+            this.Sel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Sel.Width = 17;
             // 
             // frmBorrowedBookAddingList
             // 
@@ -294,10 +297,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridViewImageColumn Sel;
     }
 }

@@ -21,13 +21,10 @@ namespace Library_Management_System
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyCon());
+            LoadRecords();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void LoadRecord()
         {
 
         }
@@ -41,7 +38,13 @@ namespace Library_Management_System
         {
             dataGridView2.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("select ");
+            cm = new SqlCommand("select regno,name,phoneno from tblStudent",cn);
+            dr = cm.ExecuteReader();
+            while(dr.Read())
+            {
+                dataGridView2.Rows.Add(dr["regno"].ToString(), dr["name"].ToString(), dr["phoneno"].ToString());
+            }
+            dr.Close();
             cn.Close();
         }
     }

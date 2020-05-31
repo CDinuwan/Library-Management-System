@@ -93,13 +93,34 @@ namespace Library_Management_System
 
         private void label2_Click(object sender, EventArgs e)
         {
-            frmBorrowedBookAddingList frm = new frmBorrowedBookAddingList();
+            frmBorrowedBookAddingList frm = new frmBorrowedBookAddingList(this);
             frm.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
             frmStudentAddingList frm = new frmStudentAddingList();
+            frm.ShowDialog();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Clear();    
+        }
+        public void Clear()
+        {
+            dataGridView1.Rows.Clear();
+            txtBorrowerName.Clear();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Staff_Details frm = new Staff_Details();
             frm.ShowDialog();
         }
     }
