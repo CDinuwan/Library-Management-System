@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Library_Management_System
 {
     public partial class frmStudentDashBoad : Form
     {
+        SqlConnection cn = new SqlConnection();
+        SqlCommand cm = new SqlCommand();
+        DBConnection dbcon = new DBConnection();
+        SqlDataReader dr;
         public frmStudentDashBoad()
         {
             InitializeComponent();
+            cn = new SqlConnection(dbcon.MyCon());
+            LoadRecord();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -36,7 +43,27 @@ namespace Library_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        public void LoadRecord()
+        {
+            int i = 0;
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select * from tblBook", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                i += 1;
+                dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+            }
+            dr.Close();
+            cn.Close();
         }
     }
 }
