@@ -34,5 +34,12 @@ namespace Library_Management_System
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmStudentDashBoad f = new frmStudentDashBoad();
+            this.Hide();
+            f.Show();
+        }
     }
 }
