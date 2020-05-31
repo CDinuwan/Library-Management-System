@@ -115,21 +115,28 @@ namespace Library_Management_System
             string colName = dataGridView1.Columns[e.ColumnIndex].Name;
             if (colName == "Sel")
             {
-                if (MessageBox.Show("Are you sure you want to add this book?", "Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (frm.txtBorrowerName.Text == String.Empty)
                 {
-                    cn.Open();
-                    cm = new SqlCommand("insert into tblBorrowedBooks(sname,bname,isbn,sdate,commitdate)values(@sname,@bname,@isbn,@sdate,@commitdate)", cn);
-                    cm.Parameters.AddWithValue("@sname", frm.txtBorrowerName.Text);
-                    cm.Parameters.AddWithValue("@bname", dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
-                    cm.Parameters.AddWithValue("@isbn", dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    cm.Parameters.AddWithValue("@sdate", frm.dateTimePicker1.Value.ToString());
-                    cm.Parameters.AddWithValue("@commitdate", frm.dateTimePicker2.Value.ToString());
-                    cm.ExecuteNonQuery();
-                    cn.Close();
+                    MessageBox.Show("Please fill the borrower name", "Fill Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (MessageBox.Show("Are you sure you want to add this book?", "Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cn.Open();
+                        cm = new SqlCommand("insert into tblBorrowedBooks(sname,bname,isbn,sdate,commitdate)values(@sname,@bname,@isbn,@sdate,@commitdate)", cn);
+                        cm.Parameters.AddWithValue("@sname", frm.txtBorrowerName.Text);
+                        cm.Parameters.AddWithValue("@bname", dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                        cm.Parameters.AddWithValue("@isbn", dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        cm.Parameters.AddWithValue("@sdate", frm.dateTimePicker1.Value.ToString());
+                        cm.Parameters.AddWithValue("@commitdate", frm.dateTimePicker2.Value.ToString());
+                        cm.ExecuteNonQuery();
+                        cn.Close();
 
-                    MessageBox.Show("Your book is successfully added", "Confrimation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Dispose();
-                    frm.LoadRecord();
+                        MessageBox.Show("Your book is successfully added", "Confrimation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Dispose();
+                        frm.LoadRecord();
+                    }
                 }
 
             }

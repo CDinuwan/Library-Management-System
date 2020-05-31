@@ -88,7 +88,11 @@ namespace Library_Management_System
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            
+            SearchText();
+            if (txtSearch.Text == String.Empty)
+            {
+                LoadRecord();
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -122,6 +126,28 @@ namespace Library_Management_System
         {
             Staff_Details frm = new Staff_Details();
             frm.ShowDialog();
+        }
+        public void SearchText()
+        {
+            try
+            {
+                int i = 0;
+                dataGridView1.Rows.Clear();
+                cn.Open();
+                cm = new SqlCommand("select * from tblBorrowedBooks where isbn like'"+txtSearch.Text+"'",cn);
+                dr = cm.ExecuteReader();
+                while(dr.Read())
+                {
+                    i += 1;
+                    dataGridView1.Rows.Add(i, dr["sname"].ToString(), dr["bname"].ToString(), dr["isbn"].ToString(), dr["sdate"].ToString(), dr["commitdate"].ToString());
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
