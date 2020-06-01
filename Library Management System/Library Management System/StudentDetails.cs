@@ -31,6 +31,7 @@ namespace Library_Management_System
             if(colName=="Edit")
             {
                 frmStudentAdd frm = new frmStudentAdd(this);
+                frm.btnSave.Enabled = false;
                 frm.txtRegno.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frm.txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 frm.txtBirthDay.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -40,12 +41,16 @@ namespace Library_Management_System
             }
             else if(colName=="Delete")
             {
-                cn.Open();
-                cm = new SqlCommand("delete from tblStudent where regno like '" + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + "'",cn);
-                cm.ExecuteNonQuery();
-                cn.Close();
-                MessageBox.Show("Your record has been successfully deleted.");
-                LoadRecord();
+                if(MessageBox.Show("Are you sure do you want to delete this record?","Deleting",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("delete from tblStudent where regno like '" + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", cn);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Your record has been successfully deleted.");
+                    LoadRecord();
+                }
+                
             }
         }
         public void LoadRecord()
@@ -72,6 +77,7 @@ namespace Library_Management_System
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             frmStudentAdd frm = new frmStudentAdd(this);
+            frm.btnUpdate.Enabled = false;
             frm.ShowDialog();
         }
 

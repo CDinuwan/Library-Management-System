@@ -47,5 +47,27 @@ namespace Library_Management_System
             dr.Close();
             cn.Close();
         }
+        public void SearchText()
+        {
+            dataGridView2.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select regno,name,phoneno from tblStudent where regno like'"+txtSearch.Text+"'", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                dataGridView2.Rows.Add(dr["regno"].ToString(), dr["name"].ToString(), dr["phoneno"].ToString());
+            }
+            dr.Close();
+            cn.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchText();
+            if(txtSearch.Text==String.Empty)
+            {
+                LoadRecords();
+            }
+        }
     }
 }

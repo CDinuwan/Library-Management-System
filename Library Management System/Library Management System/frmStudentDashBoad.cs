@@ -65,5 +65,36 @@ namespace Library_Management_System
             dr.Close();
             cn.Close();
         }
+        public void SearchText()
+        {
+            int i = 0;
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select * from tblBook where booktitle like'" + txtSearch.Text + "'", cn);
+            dr = cm.ExecuteReader();
+            while(dr.Read())
+            { 
+                {
+                    i += 1;
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                }
+            }
+            dr.Close();
+            cn.Close();
+        }
+
+        private void txtSearch_TabStopChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchText();
+            if (txtSearch.Text == String.Empty)
+            {
+                LoadRecord();
+            }
+        }
     }
 }

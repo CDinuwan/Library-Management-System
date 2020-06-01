@@ -14,6 +14,7 @@ namespace Library_Management_System
         SqlCommand cm = new SqlCommand();
         private int getTotalBook;
         private string con;
+        private int studentcount;
         public string MyCon()
         {
             con = @"Data Source=DESKTOP-OUGSDHL\SQLEXPRESS;Initial Catalog=LibraryMS;Integrated Security=True";
@@ -28,6 +29,16 @@ namespace Library_Management_System
             getTotalBook = Int32.Parse(cm.ExecuteScalar().ToString());
             cn.Close();
             return getTotalBook;
+        }
+        public int StudentCount()
+        {
+            cn = new SqlConnection();
+            cn.ConnectionString = MyCon();
+            cn.Open();
+            cm = new SqlCommand("select count(*) from tblStudents", cn);
+            studentcount = Int32.Parse(cm.ExecuteScalar().ToString());
+            cn.Close();
+            return studentcount;
         }
     }
 }
