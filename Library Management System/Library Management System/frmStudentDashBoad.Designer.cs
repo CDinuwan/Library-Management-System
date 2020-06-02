@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentDashBoad));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,19 +47,41 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtIsbnSearch = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtAuthor = new MetroFramework.Controls.MetroTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtLanguage = new MetroFramework.Controls.MetroTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtBookName = new MetroFramework.Controls.MetroTextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -70,50 +90,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1019, 74);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Location = new System.Drawing.Point(616, 18);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(285, 42);
-            this.panel2.TabIndex = 4;
-            // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(206, 1);
-            this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.CustomButton.TabIndex = 1;
-            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearch.CustomButton.UseSelectable = true;
-            this.txtSearch.CustomButton.Visible = false;
-            this.txtSearch.DisplayIcon = true;
-            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(34, 7);
-            this.txtSearch.MaxLength = 32767;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "Search Here";
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.SelectionLength = 0;
-            this.txtSearch.SelectionStart = 0;
-            this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(234, 29);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMark = "Search Here";
-            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSearch.TabStopChanged += new System.EventHandler(this.txtSearch_TabStopChanged);
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pictureBox2
             // 
@@ -151,6 +127,18 @@
             // Menu
             // 
             this.Menu.BackColor = System.Drawing.Color.Black;
+            this.Menu.Controls.Add(this.label6);
+            this.Menu.Controls.Add(this.pictureBox7);
+            this.Menu.Controls.Add(this.panel7);
+            this.Menu.Controls.Add(this.label5);
+            this.Menu.Controls.Add(this.pictureBox6);
+            this.Menu.Controls.Add(this.panel6);
+            this.Menu.Controls.Add(this.label4);
+            this.Menu.Controls.Add(this.pictureBox5);
+            this.Menu.Controls.Add(this.panel5);
+            this.Menu.Controls.Add(this.label3);
+            this.Menu.Controls.Add(this.pictureBox4);
+            this.Menu.Controls.Add(this.panel4);
             this.Menu.Controls.Add(this.label2);
             this.Menu.Controls.Add(this.pictureBox3);
             this.Menu.Controls.Add(this.panel3);
@@ -159,20 +147,21 @@
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(300, 550);
             this.Menu.TabIndex = 1;
+            this.Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Menu_Paint);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -279,6 +268,263 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Library Management\r\n System";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtIsbnSearch);
+            this.panel4.Location = new System.Drawing.Point(71, 301);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(226, 42);
+            this.panel4.TabIndex = 5;
+            // 
+            // txtIsbnSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtIsbnSearch.CustomButton.Image = null;
+            this.txtIsbnSearch.CustomButton.Location = new System.Drawing.Point(188, 1);
+            this.txtIsbnSearch.CustomButton.Name = "";
+            this.txtIsbnSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtIsbnSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtIsbnSearch.CustomButton.TabIndex = 1;
+            this.txtIsbnSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtIsbnSearch.CustomButton.UseSelectable = true;
+            this.txtIsbnSearch.CustomButton.Visible = false;
+            this.txtIsbnSearch.DisplayIcon = true;
+            this.txtIsbnSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtIsbnSearch.Icon")));
+            this.txtIsbnSearch.Lines = new string[0];
+            this.txtIsbnSearch.Location = new System.Drawing.Point(5, 7);
+            this.txtIsbnSearch.MaxLength = 32767;
+            this.txtIsbnSearch.Name = "txtIsbnSearch";
+            this.txtIsbnSearch.PasswordChar = '\0';
+            this.txtIsbnSearch.PromptText = "Search Here";
+            this.txtIsbnSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtIsbnSearch.SelectedText = "";
+            this.txtIsbnSearch.SelectionLength = 0;
+            this.txtIsbnSearch.SelectionStart = 0;
+            this.txtIsbnSearch.ShortcutsEnabled = true;
+            this.txtIsbnSearch.Size = new System.Drawing.Size(216, 29);
+            this.txtIsbnSearch.TabIndex = 0;
+            this.txtIsbnSearch.UseSelectable = true;
+            this.txtIsbnSearch.WaterMark = "Search Here";
+            this.txtIsbnSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtIsbnSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtIsbnSearch.TextChanged += new System.EventHandler(this.txtIsbnSearch_TextChanged);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(14, 300);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(99, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Search using ISBN";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(100, 363);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Search using Author";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(16, 389);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtAuthor);
+            this.panel5.Location = new System.Drawing.Point(72, 390);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(226, 42);
+            this.panel5.TabIndex = 8;
+            // 
+            // txtAuthor
+            // 
+            // 
+            // 
+            // 
+            this.txtAuthor.CustomButton.Image = null;
+            this.txtAuthor.CustomButton.Location = new System.Drawing.Point(188, 1);
+            this.txtAuthor.CustomButton.Name = "";
+            this.txtAuthor.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtAuthor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAuthor.CustomButton.TabIndex = 1;
+            this.txtAuthor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAuthor.CustomButton.UseSelectable = true;
+            this.txtAuthor.CustomButton.Visible = false;
+            this.txtAuthor.DisplayIcon = true;
+            this.txtAuthor.Icon = ((System.Drawing.Image)(resources.GetObject("txtAuthor.Icon")));
+            this.txtAuthor.Lines = new string[0];
+            this.txtAuthor.Location = new System.Drawing.Point(5, 7);
+            this.txtAuthor.MaxLength = 32767;
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.PasswordChar = '\0';
+            this.txtAuthor.PromptText = "Search Here";
+            this.txtAuthor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAuthor.SelectedText = "";
+            this.txtAuthor.SelectionLength = 0;
+            this.txtAuthor.SelectionStart = 0;
+            this.txtAuthor.ShortcutsEnabled = true;
+            this.txtAuthor.Size = new System.Drawing.Size(216, 29);
+            this.txtAuthor.TabIndex = 0;
+            this.txtAuthor.UseSelectable = true;
+            this.txtAuthor.WaterMark = "Search Here";
+            this.txtAuthor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAuthor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAuthor.TextChanged += new System.EventHandler(this.txtAuthor_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(100, 456);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Search using Language";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(17, 482);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.txtLanguage);
+            this.panel6.Location = new System.Drawing.Point(72, 483);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(226, 42);
+            this.panel6.TabIndex = 11;
+            // 
+            // txtLanguage
+            // 
+            // 
+            // 
+            // 
+            this.txtLanguage.CustomButton.Image = null;
+            this.txtLanguage.CustomButton.Location = new System.Drawing.Point(188, 1);
+            this.txtLanguage.CustomButton.Name = "";
+            this.txtLanguage.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtLanguage.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLanguage.CustomButton.TabIndex = 1;
+            this.txtLanguage.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLanguage.CustomButton.UseSelectable = true;
+            this.txtLanguage.CustomButton.Visible = false;
+            this.txtLanguage.DisplayIcon = true;
+            this.txtLanguage.Icon = ((System.Drawing.Image)(resources.GetObject("txtLanguage.Icon")));
+            this.txtLanguage.Lines = new string[0];
+            this.txtLanguage.Location = new System.Drawing.Point(5, 7);
+            this.txtLanguage.MaxLength = 32767;
+            this.txtLanguage.Name = "txtLanguage";
+            this.txtLanguage.PasswordChar = '\0';
+            this.txtLanguage.PromptText = "Search Here";
+            this.txtLanguage.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLanguage.SelectedText = "";
+            this.txtLanguage.SelectionLength = 0;
+            this.txtLanguage.SelectionStart = 0;
+            this.txtLanguage.ShortcutsEnabled = true;
+            this.txtLanguage.Size = new System.Drawing.Size(216, 29);
+            this.txtLanguage.TabIndex = 0;
+            this.txtLanguage.UseSelectable = true;
+            this.txtLanguage.WaterMark = "Search Here";
+            this.txtLanguage.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLanguage.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLanguage.TextChanged += new System.EventHandler(this.txtLanguage_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(99, 187);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 16);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Search using Book Name";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(13, 213);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.txtBookName);
+            this.panel7.Location = new System.Drawing.Point(71, 214);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(226, 42);
+            this.panel7.TabIndex = 14;
+            // 
+            // txtBookName
+            // 
+            // 
+            // 
+            // 
+            this.txtBookName.CustomButton.Image = null;
+            this.txtBookName.CustomButton.Location = new System.Drawing.Point(188, 1);
+            this.txtBookName.CustomButton.Name = "";
+            this.txtBookName.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtBookName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBookName.CustomButton.TabIndex = 1;
+            this.txtBookName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBookName.CustomButton.UseSelectable = true;
+            this.txtBookName.CustomButton.Visible = false;
+            this.txtBookName.DisplayIcon = true;
+            this.txtBookName.Icon = ((System.Drawing.Image)(resources.GetObject("txtBookName.Icon")));
+            this.txtBookName.Lines = new string[0];
+            this.txtBookName.Location = new System.Drawing.Point(5, 7);
+            this.txtBookName.MaxLength = 32767;
+            this.txtBookName.Name = "txtBookName";
+            this.txtBookName.PasswordChar = '\0';
+            this.txtBookName.PromptText = "Search Here";
+            this.txtBookName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBookName.SelectedText = "";
+            this.txtBookName.SelectionLength = 0;
+            this.txtBookName.SelectionStart = 0;
+            this.txtBookName.ShortcutsEnabled = true;
+            this.txtBookName.Size = new System.Drawing.Size(216, 29);
+            this.txtBookName.TabIndex = 0;
+            this.txtBookName.UseSelectable = true;
+            this.txtBookName.WaterMark = "Search Here";
+            this.txtBookName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBookName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBookName.TextChanged += new System.EventHandler(this.txtBookName_TextChanged);
+            this.txtBookName.Click += new System.EventHandler(this.txtBookName_Click);
+            // 
             // frmStudentDashBoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,13 +540,20 @@
             this.Load += new System.EventHandler(this.frmStudentDashBoad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -313,8 +566,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroTextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -326,5 +577,21 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel4;
+        private MetroFramework.Controls.MetroTextBox txtIsbnSearch;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel7;
+        private MetroFramework.Controls.MetroTextBox txtBookName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel6;
+        private MetroFramework.Controls.MetroTextBox txtLanguage;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel5;
+        private MetroFramework.Controls.MetroTextBox txtAuthor;
+        private System.Windows.Forms.Label label3;
     }
 }

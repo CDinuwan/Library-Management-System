@@ -70,7 +70,7 @@ namespace Library_Management_System
             int i = 0;
             dataGridView1.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("select * from tblBook where booktitle like'" + txtSearch.Text + "'", cn);
+            cm = new SqlCommand("select * from tblBook where author like'" + txtAuthor.Text + "'", cn);
             dr = cm.ExecuteReader();
             while(dr.Read())
             { 
@@ -82,7 +82,23 @@ namespace Library_Management_System
             dr.Close();
             cn.Close();
         }
-
+        public void SearchIsbn()
+        {
+            int i = 0;
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select * from tblBook where isbn like'" + txtIsbnSearch.Text + "'", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                {
+                    i += 1;
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                }
+            }
+            dr.Close();
+            cn.Close();
+        }
         private void txtSearch_TabStopChanged(object sender, EventArgs e)
         {
            
@@ -90,8 +106,84 @@ namespace Library_Management_System
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtIsbnSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchIsbn();
+            if(txtIsbnSearch.Text==String.Empty)
+            {
+                LoadRecord();
+            }
+        }
+
+        private void txtAuthor_TextChanged(object sender, EventArgs e)
+        {
             SearchText();
-            if (txtSearch.Text == String.Empty)
+            if (txtAuthor.Text == String.Empty)
+            {
+                LoadRecord();
+            }
+        }
+        public void SearchLanguage()
+        {
+            int i = 0;
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select * from tblBook where language like'" + txtLanguage.Text + "'", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                {
+                    i += 1;
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                }
+            }
+            dr.Close();
+            cn.Close();
+        }
+
+        private void Menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtLanguage_TextChanged(object sender, EventArgs e)
+        {
+            SearchLanguage();
+            if(txtLanguage.Text==String.Empty)
+            {
+                LoadRecord();
+            }
+        }
+
+        private void txtBookName_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void SearchBookName()
+        {
+            int i = 0;
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select * from tblBook where booktitle like'" + txtBookName.Text + "'", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                {
+                    i += 1;
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                }
+            }
+            dr.Close();
+            cn.Close();
+        }
+
+        private void txtBookName_TextChanged(object sender, EventArgs e)
+        {
+            SearchBookName();
+            if (txtLanguage.Text == String.Empty)
             {
                 LoadRecord();
             }
