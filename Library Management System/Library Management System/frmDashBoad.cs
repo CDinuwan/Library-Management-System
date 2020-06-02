@@ -33,6 +33,9 @@ namespace Library_Management_System
         {
 
             label1.Text = dbcon.GetTotalBooks().ToString();
+            lblTotalStudents.Text = dbcon.StudentCount().ToString();
+            lblStaffCount.Text = dbcon.StaffCount().ToString();
+            lblBorrowedBook.Text = dbcon.BorrowedBookCount().ToString();
         }
 
         private void ll_Click(object sender, EventArgs e)

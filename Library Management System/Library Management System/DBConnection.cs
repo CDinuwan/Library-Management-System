@@ -15,6 +15,8 @@ namespace Library_Management_System
         private int getTotalBook;
         private string con;
         private int studentcount;
+        private int staffcount;
+        private int borrowedBooksCount;
         public string MyCon()
         {
             con = @"Data Source=DESKTOP-OUGSDHL\SQLEXPRESS;Initial Catalog=LibraryMS;Integrated Security=True";
@@ -35,10 +37,30 @@ namespace Library_Management_System
             cn = new SqlConnection();
             cn.ConnectionString = MyCon();
             cn.Open();
-            cm = new SqlCommand("select count(*) from tblStudents", cn);
+            cm = new SqlCommand("select count(*) from tblStudent", cn);
             studentcount = Int32.Parse(cm.ExecuteScalar().ToString());
             cn.Close();
             return studentcount;
+        }
+        public int StaffCount()
+        {
+            cn = new SqlConnection();
+            cn.ConnectionString = MyCon();
+            cn.Open();
+            cm = new SqlCommand("select count(*) from tblStaff", cn);
+            staffcount = Int32.Parse(cm.ExecuteScalar().ToString());
+            cn.Close();
+            return staffcount;
+        }
+        public int BorrowedBookCount()
+        {
+            cn = new SqlConnection();
+            cn.ConnectionString = MyCon();
+            cn.Open();
+            cm = new SqlCommand("select count(*) from tblBorrowedBooks", cn);
+            borrowedBooksCount = Int32.Parse(cm.ExecuteScalar().ToString());
+            cn.Close();
+            return borrowedBooksCount;
         }
     }
 }

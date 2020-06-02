@@ -34,15 +34,15 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblBorrowedBook = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblStaffCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotalStudents = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -76,7 +76,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.lblBorrowedBook);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Location = new System.Drawing.Point(657, 43);
@@ -84,16 +84,16 @@
             this.panel5.Size = new System.Drawing.Size(195, 104);
             this.panel5.TabIndex = 7;
             // 
-            // label7
+            // lblBorrowedBook
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(76, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 28);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "label7";
+            this.lblBorrowedBook.AutoSize = true;
+            this.lblBorrowedBook.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBorrowedBook.ForeColor = System.Drawing.Color.White;
+            this.lblBorrowedBook.Location = new System.Drawing.Point(76, 66);
+            this.lblBorrowedBook.Name = "lblBorrowedBook";
+            this.lblBorrowedBook.Size = new System.Drawing.Size(75, 28);
+            this.lblBorrowedBook.TabIndex = 5;
+            this.lblBorrowedBook.Text = "label7";
             // 
             // label4
             // 
@@ -119,7 +119,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Blue;
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lblStaffCount);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(444, 43);
@@ -127,16 +127,16 @@
             this.panel4.Size = new System.Drawing.Size(195, 104);
             this.panel4.TabIndex = 6;
             // 
-            // label6
+            // lblStaffCount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(81, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 28);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.lblStaffCount.AutoSize = true;
+            this.lblStaffCount.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffCount.ForeColor = System.Drawing.Color.White;
+            this.lblStaffCount.Location = new System.Drawing.Point(81, 63);
+            this.lblStaffCount.Name = "lblStaffCount";
+            this.lblStaffCount.Size = new System.Drawing.Size(75, 28);
+            this.lblStaffCount.TabIndex = 4;
+            this.lblStaffCount.Text = "label6";
             // 
             // label3
             // 
@@ -162,7 +162,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Red;
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblTotalStudents);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Location = new System.Drawing.Point(232, 43);
@@ -170,16 +170,16 @@
             this.panel3.Size = new System.Drawing.Size(195, 104);
             this.panel3.TabIndex = 5;
             // 
-            // label5
+            // lblTotalStudents
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(78, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 28);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.lblTotalStudents.AutoSize = true;
+            this.lblTotalStudents.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalStudents.ForeColor = System.Drawing.Color.White;
+            this.lblTotalStudents.Location = new System.Drawing.Point(78, 65);
+            this.lblTotalStudents.Name = "lblTotalStudents";
+            this.lblTotalStudents.Size = new System.Drawing.Size(75, 28);
+            this.lblTotalStudents.TabIndex = 3;
+            this.lblTotalStudents.Text = "label5";
             // 
             // label2
             // 
@@ -315,9 +315,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label ll;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotalStudents;
+        private System.Windows.Forms.Label lblBorrowedBook;
+        private System.Windows.Forms.Label lblStaffCount;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
