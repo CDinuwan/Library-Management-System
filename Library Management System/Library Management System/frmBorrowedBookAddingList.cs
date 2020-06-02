@@ -40,11 +40,11 @@ namespace Library_Management_System
         {
             dataGridView1.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("select isbn,booktitle,publicationyear,language from tblBook", cn);
+            cm = new SqlCommand("select isbn,booktitle,author,publicationyear,language from tblBook", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
-                dataGridView1.Rows.Add(dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString());
+                dataGridView1.Rows.Add(dr["isbn"].ToString(), dr["booktitle"].ToString(),dr["author"].ToString(),dr["publicationyear"].ToString(), dr["language"].ToString());
             }
             dr.Close();
             cn.Close();
@@ -55,11 +55,11 @@ namespace Library_Management_System
             {
                 dataGridView1.Rows.Clear();
                 cn.Open();
-                cm = new SqlCommand("select isbn,booktitle,publicationyear,language from tblBook where isbn like'" + txtSearch.Text + "' order by isbn", cn);
+                cm = new SqlCommand("select isbn,booktitle,author,publicationyear,language from tblBook where isbn like'" + txtSearch.Text + "' order by isbn", cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
-                    dataGridView1.Rows.Add(dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString());
+                    dataGridView1.Rows.Add(dr["isbn"].ToString(), dr["booktitle"].ToString(),dr["author"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString());
                 }
                 dr.Close();
                 cn.Close();
@@ -117,15 +117,16 @@ namespace Library_Management_System
             {
                 if (frm.txtBorrowerName.Text == String.Empty)
                 {
-                    MessageBox.Show("Please fill the borrower name", "Fill Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please fill the borrower name!", "Fill Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     if (MessageBox.Show("Are you sure you want to add this book?", "Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         cn.Open();
-                        cm = new SqlCommand("insert into tblBorrowedBooks(sname,bname,isbn,sdate,commitdate)values(@sname,@bname,@isbn,@sdate,@commitdate)", cn);
+                        cm = new SqlCommand("insert into tblBorrowedBooks(sname,author,bname,isbn,sdate,commitdate)values(@sname,@author,@bname,@isbn,@sdate,@commitdate)", cn);
                         cm.Parameters.AddWithValue("@sname", frm.txtBorrowerName.Text);
+                        cm.Parameters.AddWithValue("@author", dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                         cm.Parameters.AddWithValue("@bname", dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
                         cm.Parameters.AddWithValue("@isbn", dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                         cm.Parameters.AddWithValue("@sdate", frm.dateTimePicker1.Value.ToString());

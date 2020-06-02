@@ -44,7 +44,7 @@ namespace Library_Management_System
             while(dr.Read())
             {
                 i += 1;
-                dataGridView1.Rows.Add(i, dr["sname"].ToString(), dr["bname"].ToString(), dr["isbn"].ToString(), dr["sdate"].ToString(), dr["commitdate"].ToString());
+                dataGridView1.Rows.Add(i, dr["sname"].ToString(),dr["author"].ToString(), dr["bname"].ToString(), dr["isbn"].ToString(), dr["sdate"].ToString(), dr["commitdate"].ToString());
             }
             dr.Close();
             cn.Close();
@@ -64,9 +64,10 @@ namespace Library_Management_System
                     if (MessageBox.Show("Are you sure you want to delete this record ?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         cn.Open();
-                        cm = new SqlCommand("delete from tblBorrowedBooks where id like'" + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", cn);
+                        cm = new SqlCommand("delete from tblBorrowedBooks where sname like'" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", cn);
                         cm.ExecuteNonQuery();
                         cn.Close();
+                        MessageBox.Show("Your message has been successfully deleted!", "Deleting", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadRecord();
                     }
                 }
@@ -139,7 +140,7 @@ namespace Library_Management_System
                 while(dr.Read())
                 {
                     i += 1;
-                    dataGridView1.Rows.Add(i, dr["sname"].ToString(), dr["bname"].ToString(), dr["isbn"].ToString(), dr["sdate"].ToString(), dr["commitdate"].ToString());
+                    dataGridView1.Rows.Add(i, dr["sname"].ToString(),dr["author"].ToString(), dr["bname"].ToString(), dr["isbn"].ToString(), dr["sdate"].ToString(), dr["commitdate"].ToString());
                 }
                 dr.Close();
                 cn.Close();

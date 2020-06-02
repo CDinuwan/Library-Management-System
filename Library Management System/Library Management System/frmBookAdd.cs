@@ -39,13 +39,12 @@ namespace Library_Management_System
         {
             txtISBN.Clear();
             txtBookTitle.Clear();
+            txtAuthor.Clear();
             txtCategory.Clear();
             txtNoOfCopies.Clear();
             txtPublicationYear.Clear();
             txtCurrentCopies.Clear();
             txtLanguage.Clear();
-            btnCancel.Enabled=true;
-            btnUpdate.Enabled = false;
 
         }
 
@@ -56,9 +55,10 @@ namespace Library_Management_System
                 if(MessageBox.Show("Are you sure you want to save this record?","Save",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("insert into tblBook(isbn,booktitle,publicationyear,language,category,noofcopies,currentcopies)values(@isbn,@booktitle,@publicationyear,@language,@category,@noofcopies,@currentcopies)", cn);
+                    cm = new SqlCommand("insert into tblBook(isbn,booktitle,author,publicationyear,language,category,noofcopies,currentcopies)values(@isbn,@booktitle,@author,@publicationyear,@language,@category,@noofcopies,@currentcopies)", cn);
                     cm.Parameters.AddWithValue("@isbn", txtISBN.Text);
                     cm.Parameters.AddWithValue("@booktitle", txtBookTitle.Text);
+                    cm.Parameters.AddWithValue("@author", txtAuthor.Text);
                     cm.Parameters.AddWithValue("@publicationyear", txtPublicationYear.Text);
                     cm.Parameters.AddWithValue("@language", txtLanguage.Text);
                     cm.Parameters.AddWithValue("@category", txtCategory.Text);
@@ -165,12 +165,13 @@ namespace Library_Management_System
         {
              try
             {
-                if (MessageBox.Show("Are you sure you want to update this record?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to update this record?", "update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("update tblBook set isbn=@isbn,booktitle=@booktitle,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies where isbn like'"+txtISBN.Text+"'", cn);
+                    cm = new SqlCommand("update tblBook set isbn=@isbn,booktitle=@booktitle,author=@author,publicationyear=@publicationyear,language=@language,category=@category,noofcopies=@noofcopies,currentcopies=@currentcopies where isbn like'" + txtISBN.Text+"'", cn);
                     cm.Parameters.AddWithValue("@isbn", txtISBN.Text);
                     cm.Parameters.AddWithValue("@booktitle", txtBookTitle.Text);
+                    cm.Parameters.AddWithValue("@author", txtAuthor.Text);
                     cm.Parameters.AddWithValue("@publicationyear", txtPublicationYear.Text);
                     cm.Parameters.AddWithValue("@language", txtLanguage.Text);
                     cm.Parameters.AddWithValue("@category", txtCategory.Text);

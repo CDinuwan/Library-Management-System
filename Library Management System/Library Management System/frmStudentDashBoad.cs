@@ -60,7 +60,7 @@ namespace Library_Management_System
             while (dr.Read())
             {
                 i += 1;
-                dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(),dr["author"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
             }
             dr.Close();
             cn.Close();
