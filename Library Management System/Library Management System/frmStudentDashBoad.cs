@@ -76,7 +76,7 @@ namespace Library_Management_System
             { 
                 {
                     i += 1;
-                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["author"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
                 }
             }
             dr.Close();
@@ -93,7 +93,7 @@ namespace Library_Management_System
             {
                 {
                     i += 1;
-                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(),dr["author"].ToString(),dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
                 }
             }
             dr.Close();
@@ -137,7 +137,7 @@ namespace Library_Management_System
             {
                 {
                     i += 1;
-                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(),dr["author"].ToString(),dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
                 }
             }
             dr.Close();
@@ -162,31 +162,43 @@ namespace Library_Management_System
         {
 
         }
-        public void SearchBookName()
+        
+
+        private void txtBookName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtLanguage_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void searchBOOk()
         {
             int i = 0;
             dataGridView1.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("select * from tblBook where booktitle like'" + txtBookName.Text + "'", cn);
+            cm = new SqlCommand("select * from tblBook where booktitle like'" + metroTextBox1.Text + "'", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
                 {
                     i += 1;
-                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
+                    dataGridView1.Rows.Add(i, dr["isbn"].ToString(), dr["booktitle"].ToString(), dr["author"].ToString(), dr["publicationyear"].ToString(), dr["language"].ToString(), dr["category"].ToString(), dr["noofcopies"].ToString());
                 }
             }
             dr.Close();
             cn.Close();
         }
 
-        private void txtBookName_TextChanged(object sender, EventArgs e)
+        private void metroTextBox1_TextChanged(object sender, EventArgs e)
         {
-            SearchBookName();
-            if (txtLanguage.Text == String.Empty)
+            searchBOOk(); 
+            if (metroTextBox1.Text == String.Empty)
             {
                 LoadRecord();
             }
+            
         }
     }
 }
